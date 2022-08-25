@@ -11,6 +11,7 @@ nav{
     position: relative;
     align-items: center;
     justify-content: flex-start;
+    font-size: 20px;
 }
 .navbar-link{
     align-items: center;
@@ -52,3 +53,12 @@ body{
     justify-content: center;
     align-items: center
 }
+
+
+@media only screen and (max-width: 600px) {
+    nav form{
+    }
+    .logo{      
+    }
+
+  }
