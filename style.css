@@ -19,7 +19,6 @@ nav{
     width: 90%;
 }
 nav a{
-    color: black;
     position: relative;
     padding: 10px;
 }
@@ -38,10 +37,21 @@ nav a:hover::before{
 }
 .login{
     justify-content: center;
-    padding:20px;
+    padding: 15px;
+    color:rgba(0, 0, 0, 0.555);
     background-color: #00CCBF;
     text-align: center;
+    border-style: none;
+    position: relative;
 }
+.login:hover{
+    padding: 15px;
+    background-color: #00665F;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+    border-radius: 5%;
+    color:rgba(0, 0, 0, 1);
+}
+
 body{
     width: 100%;
     height: 100vh;
@@ -54,35 +64,35 @@ body{
 }
 .home{
     width: 100%;
-    margin-top: 10rem;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url("./images/StockSnap_TNKLX6MUWC.jpg");
+    background-size :cover;
+    background-position: fixed;
 }
 .group{
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    width: 30%;
-    margin-left: 50px;
-    background-color: #fffaff;
-    padding-top: 76px;
-    padding-bottom: 76px;
-    padding-left: 5px;
+    background-color: rgba(0, 0, 0, 0);
+    margin-right: 65%;
+    margin-left: 10%;
 }
 
 .btnSaibaMais{
+    align-items: center;
     padding: 15px;
     background-color: #00CCBF;
     text-decoration: none;
-    border-radius: 50%;
+    border-radius: 5%;
+    border-style: none;
 }
 .btnSaibaMais a{
     text-decoration: none;
     color: black;
 }
 .btnSaibaMais a:hover{
-    color: #00665F;
+    color: #FF5F5D;
 }
 
 @media only screen and (max-width: 600px) {
