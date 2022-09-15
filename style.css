@@ -35,22 +35,6 @@ nav .nav-item a::before{
 nav a:hover::before{
     width: 100%;
 }
-.login{
-    justify-content: center;
-    padding: 15px;
-    color:rgba(0, 0, 0, 0.555);
-    background-color: #00CCBF;
-    text-align: center;
-    border-style: none;
-    position: relative;
-}
-.login:hover{
-    padding: 15px;
-    background-color: #00665F;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
-    border-radius: 5%;
-    color:rgba(0, 0, 0, 1);
-}
 
 body{
     width: 100%;
