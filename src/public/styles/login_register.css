@@ -1,0 +1,80 @@
+.navbar {
+    background-color: #00CCBF;
+    height: 69px;
+}
+
+.navbar-nav .nav-link {
+    color: black;
+    position: relative;
+}
+
+nav .nav-item a::before {
+    content: " ";
+    width: 0%;
+    height: 4px;
+    background-color: #00665F;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: 0.5s ease-in-out;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+figure{
+    margin: 0;
+}
+.logoTipo {
+    width: 69px;
+}
+
+.row{
+    --bs-gutter-x: 0rem
+}
+
+body{
+    width: 100%;
+    height: 92%;
+    /* background-position-x: right; */
+}
+.background,.group
+{   
+    display: flex;
+    position:static;
+}
+.background{
+    background-image: url(fundologin.jpeg);
+    background-size: 100% 100%;
+    height: 93vh;
+}
+
+label,small,.cadastro{
+    margin: 5px 1%;
+}
+.form-control,.form-check{
+    margin: 10px 1%;
+    width: 96%;
+}
+.form-check{
+    margin-top: 0;
+}
+.form-check-label{
+    margin:0 1% 0 1%;
+}
+.btn {
+    margin: 10px;
+    background-color: #00CCBF;
+    ;
+}
+.btn:hover{
+    transform: scale(1.1);
+    background-color: #00CCBF;
+    border: none;
+}
+
+@media only screen and (max-width: 992px) {
+    .navbar {
+        height: auto;
+    }
+}

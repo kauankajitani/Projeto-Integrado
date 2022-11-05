@@ -1,0 +1,57 @@
+.navbar {
+    background-color: #00CCBF;
+    height: 69px;
+}
+
+.navbar-nav .nav-link {
+    color: black;
+    position: relative;
+    left: 66rem;
+}
+
+body {
+    background-image: url(fundologin.jpeg); 
+    background-repeat: no-repeat;
+    /* background-position-x: right; */
+}
+
+.logoTipo {
+    width: 88px;
+    padding: 10px;
+    position: absolute;
+    left: -2px;
+    top: -14px;
+}
+
+.form-control{
+    width: 96%
+}
+
+.login{
+    margin-left: 70%;
+    position: relative;
+    top: 8rem;
+}
+
+.btn{
+    position: relative;
+    left: 130px;
+    top: 50px;
+    background-color: #00CCBF;
+    font-family: 'Arimo', sans-serif;;
+}
+
+nav .nav-item a::before {
+    content: " ";
+    width: 0%;
+    height: 4px;
+    background-color: #00665F;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: 0.5s ease-in-out;
+}
+
+nav a:hover::before {
+    width: 100%;
+}

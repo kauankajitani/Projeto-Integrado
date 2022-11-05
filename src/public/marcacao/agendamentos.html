@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+  <title>Consultar, Criar Agendamentos</title>
+  <link rel="shortcut icon" href="/logo.jpg">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+  <link href="./agendamentos.css" type="text/css" rel="stylesheet" media="screen,projection" />
+</head>
+
+<body>
+
+  <!-- Botão para acionar modal -->
+  <button type="button" class="btn btn-primary btn-main new" onclick="defineListEmps()" data-toggle="modal" data-target="#modalNovoAgendamento">
+    <!-- <ion-icon class="icone" name="add-outline"></ion-icon><br> -->
+    <ion-icon class="icone"name="add-circle-outline"></ion-icon>
+      <p class="p-title">Novo Agendamento</p> 
+    
+  </button>
+
+  <button type="button" class="btn btn-primary btn-main edit" data-toggle="modal" data-target="#">
+      <ion-icon class="icone" name="pencil-outline"></ion-icon><br>
+      <p class="p-title">Editar Agendamento</p> 
+  </button>
+
+  <button type="button" class="btn btn-primary btn-main new" onclick="getAgendamentos()" data-toggle="modal" data-target="#modalConsultaAgendamento">
+    <ion-icon class="icone" name="search-outline"></ion-icon><br>
+    <p class="p-title">Consultar Agendamento</p> 
+  </button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="modalNovoAgendamento" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header top">
+          <h5 class="modal-title" id="exampleModalLabel">Novo Agendamento</h5>
+          <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            
+        </div>
+
+        <div class="modal-body">
+          <div>
+            <form action="/novo-agendamento" class="form" method="post" id="cadastroAgendamento">
+              <div class="container">
+                <div class="row">
+                  <div class="col">
+                    <div class="box">
+                      <!-- /.box-header -->
+                      <div class="box-body">
+                        <div class="form-group row">
+                          <div class="col">
+                            <select title="Selecione a empresa" required name="empresa" class="selectpicker" id="emps"
+                              data-live-search="true">
+
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="input-group date" id="datepicker">
+                <input type="text" id="dataConsulta" required  disabled="true" name="data" class="form-control">
+              </div>
+          </div>
+
+          <div>
+            <select name="horario" id="horario" class="form-select" required disabled="true" aria-label="Default select example">
+              <option selected value="default">Selecione o Horário</option>
+              <option value="08:00">08:00</option>
+              <option value="08:30">08:30</option>
+              <option value="09:00">09:00</option>
+              <option value="09:30">09:30</option>
+              <option value="10:00">10:00</option>
+              <option value="10:30">10:30</option>
+              <option value="11:00">11:00</option>
+              <option value="11:30">11:30</option>
+              <option value="12:00">12:00</option>
+              <option value="12:30">12:30</option>
+              <option value="13:00">13:00</option>
+              <option value="13:30">13:30</option>
+              <option value="14:00">14:00</option>
+              <option value="14:30">14:30</option>
+              <option value="15:00">15:00</option>
+              <option value="15:30">15:30</option>
+              <option value="16:00">16:00</option>
+              <option value="16:30">16:30</option>
+              <option value="17:00">17:00</option>
+              <option value="17:30">17:30</option>
+              <option value="18:00">18:00</option>
+            </select>
+          </div>
+          </form>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-form" data-dismiss="modal">Fechar</button>
+            <button type="button" onclick="sendAgendamento()"
+              class="btn btn-primary btn-form">Confirmar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="modalConsultaAgendamento" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header top">
+          <h5 class="modal-title" id="exampleModalLabel">Agendamentos</h5>
+          <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+          </button>
+        </div>
+        <div class="modal-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Empresa</th>
+                <th scope="col">Data</th>
+                <th scope="col">Horário</th>
+              </tr>
+            </thead>
+            <tbody id="agendamentosCriados">
+              
+            </tbody>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary btn-form" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+<!-- Correto-->
+<div class="modal fade" id="staticBackdrop-right" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content correct">
+      <div class="modal-header w-border">
+        <h5 class="modal-title" id="staticBackdropLabel">Consulta Agendada</h5>
+        <button type="button" class="btn-close" data-dismiss="modal"></button>
+      </div>
+      <div class="modal-body center-icon">
+        <ion-icon name="checkmark"></ion-icon>
+      </div>
+      <div class="modal-footer w-border">
+        <button type="button" onclick="location.reload()" class="btn btn-primary" data-dismiss="modal">Entendido</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Erro -->
+<div class="modal fade" id="staticBackdrop-error" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content error">
+      <div class="modal-header w-border">
+        <h5 class="modal-title" id="staticBackdropLabel">Falha no Agendamento</h5>
+        <button type="button" class="btn-close" data-dismiss="modal"></button>
+      </div>
+      <div class="modal-body center-icon">
+        <ion-icon name="close"></ion-icon>
+      </div>
+      <div class="modal-footer w-border">
+        <button type="button" onclick="location.reload()" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button type="button" onclick="location.reload()" class="btn btn-primary" data-dismiss="modal">Entendido</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!--  Scripts-->
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"> </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"> </script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  
+
+  <script src="/agendamentos.js"></script>
+</body>
+
+</html>

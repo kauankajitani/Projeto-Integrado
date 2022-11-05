@@ -1,0 +1,274 @@
+nav {
+    width: 100%;
+    height: 69px;
+    background-color: #00CCBF;
+}
+
+.navbar-nav{
+    color: #000000;
+}
+.navbar-link {
+    align-items: center;
+    display: flex;
+    width: 90%;
+}
+
+nav a {
+    position: relative;
+    padding: 10px;
+}
+
+nav .nav-item a::before {
+    content: " ";
+    width: 0%;
+    height: 4px;
+    background-color: #00665F;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: 0.5s ease-in-out;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+.logoTipo {
+    width: 69px;
+}
+body{
+    height: 100vh;
+}
+/*home*/
+
+.home {
+    width: 100%;
+    height: 93%;
+    display: flex;
+    background-image: url("/pessoa.jpg");
+    justify-content: flex-start;
+    align-items: center;
+    background-size: 100% 100%;
+}
+
+.group {
+    position: relative;
+    left: 3%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btnSaibaMais{
+    width: fit-content;
+    padding: 1rem;
+    background-color: #00CCBF;
+    border-radius: 5%;
+    text-decoration: none;
+    color: black;
+    border-style: none;
+}
+
+.btnSaibaMais:hover {
+    transform: scale(1.25);
+}
+
+/*sobre nós*/
+
+.sobreNos {
+    width: 100%;
+    height: 100vh;
+    padding-top: 2.5rem;
+}
+
+.inicio-sobreNos {
+    align-items: center;
+    width: 60%;
+    height: 35vh;
+    padding: 16px;
+    position: relative;
+    left: 40%;
+}
+.center-icon{
+
+    text-align: center;
+}
+ion-icon{
+
+    font-size: 100px;
+
+}
+
+.correct{
+
+    background: #00ccbf;
+}
+
+.w-border{
+    border-top: none;
+    border-bottom: none;
+}
+
+.understand{
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #111;
+    --bs-btn-border-color: #111;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #1f2022;
+    --bs-btn-hover-border-color: #1f2022;
+    --bs-btn-focus-shadow-rgb: 49,132,253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #383838;
+    --bs-btn-active-border-color: #383838;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #111;
+    --bs-btn-disabled-border-color: #111;
+}
+
+.error{
+
+    background: #ff5f5d;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .sobreNos {
+        position: relative;
+        padding: 1rem;
+        height: auto;
+    }
+
+    .inicio-sobreNos {
+        position: relative;
+        padding: 0.625rem;
+        width: 100%;
+        height: auto;
+        left: 0;
+        align-items: center;
+    }
+
+    .row {
+        position: relative;
+        padding: 0;
+    }
+
+    .card {
+        position: relative;
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    nav{
+        height:auto;
+    }
+    .home {
+        justify-content: center;
+    }
+
+    .group {
+        background-color: rgba(255, 255, 255, 0.5);
+        width: 80%;
+        left: 0;
+        padding: 15px;
+    }
+}
+
+.comand{
+
+    font-size: 100px;
+    color: #111;
+
+}
+
+.w-border{
+    border-top: none;
+    border-bottom: none;
+}
+
+
+.btn-main{
+    height: 180px;
+    width: 350px;
+    --bs-btn-bg:#3f7c85; 
+    --bs-btn-color:#72f2eb;
+    --bs-btn-border-color: #3f7c85;
+    --bs-btn-hover-bg: #72f2eb;
+    --bs-btn-hover-color:#3f7c85;
+    --bs-btn-hover-border-color: #fff;
+    --bs-btn-focus-shadow-rgb: 49,132,253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #3f7c85;
+    --bs-btn-active-border-color: #3f7c85;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #558a92;
+    --bs-btn-disabled-border-color: #558a92;
+}
+
+
+
+
+.icone{
+
+    font-size: 70px;
+    
+}
+
+.error{
+
+    background: #ff5f5d;
+}
+
+
+.center-icon{
+
+    text-align: center;
+}
+
+.p-title{
+    font-size: 23px;
+}
+
+.btn-form{
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #3f7c85;
+    --bs-btn-border-color: #3f7c85;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #52848b;
+    --bs-btn-hover-border-color: #52848b;
+    --bs-btn-focus-shadow-rgb: 49,132,253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #438e99;
+    --bs-btn-active-border-color: #438e99;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #3f7c85;
+    --bs-btn-disabled-border-color: #3f7c85;
+}
+
+.top{
+    background-color: #3f7c85;
+}
+
+.material-icons:hover{
+    color: red
+}
+
+
+
+/* #dataConsulta{
+    height: 41px;
+    position: relative;
+    bottom: 78px;
+    left: 49px;
+} */
+
+
+
+
+/* .material-icons{
+    color: red;
+} */

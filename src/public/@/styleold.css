@@ -1,0 +1,41 @@
+#loginCard{
+    margin-left: 25%;
+    
+}
+
+#titleCard{
+    text-align: center;
+}
+
+
+#registerCard{
+    margin-left: 300px
+}
+
+#logo{
+    width: 100px;
+    padding: 10px;
+    position: absolute;
+    right: 120px;
+    top: -20px;
+}
+
+.error{
+    color: white;
+    background: red;
+    display: none;
+}
+
+button [disabled]{
+    opacity: 0.7;
+}
+
+  
+  
+
+
+
+
+
+
+
