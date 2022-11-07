@@ -28,7 +28,6 @@ figure{
 .logoTipo {
     width: 69px;
 }
-
 .row{
     --bs-gutter-x: 0rem
 }
@@ -36,7 +35,6 @@ figure{
 body{
     width: 100%;
     height: 92%;
-    /* background-position-x: right; */
 }
 .background,.group
 {   
@@ -48,7 +46,18 @@ body{
     background-size: 100% 100%;
     height: 93vh;
 }
-
+#formRegister{
+    margin-left:57%;
+    position: relative;
+    right: 4%;
+    top: 15%;
+}
+.login{
+    margin-left:57%;
+    position: relative;
+    right: 4%;
+    top: 15%;
+}
 label,small,.cadastro{
     margin: 5px 1%;
 }
@@ -62,10 +71,14 @@ label,small,.cadastro{
 .form-check-label{
     margin:0 1% 0 1%;
 }
-.btn {
-    margin: 10px;
+.btn{
     background-color: #00CCBF;
-    ;
+    position: relative;
+}
+.registro{
+    left:67%;
+    position: relative;
+    top: 15%;
 }
 .btn:hover{
     transform: scale(1.1);
@@ -76,5 +89,10 @@ label,small,.cadastro{
 @media only screen and (max-width: 992px) {
     .navbar {
         height: auto;
+    }
+    .registro{
+        right: 30%;
+        position: relative;
+        top: 15%;
     }
 }
