@@ -6,21 +6,33 @@
 .navbar-nav .nav-link {
     color: black;
     position: relative;
-    left: 66rem;
+}
+
+nav .nav-item a::before {
+    content: " ";
+    width: 0%;
+    height: 4px;
+    background-color: #00665F;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: 0.5s ease-in-out;
+}
+
+nav a:hover::before {
+    width: 100%;
 }
 
 body {
     background-image: url(fundologin.jpeg); 
     background-repeat: no-repeat;
-    /* background-position-x: right; */
 }
 
+figure{
+    margin: 0;
+}
 .logoTipo {
-    width: 88px;
-    padding: 10px;
-    position: absolute;
-    left: -2px;
-    top: -14px;
+    width: 69px;
 }
 
 .form-control{
@@ -35,8 +47,8 @@ body {
 
 .btn{
     position: relative;
-    left: 130px;
-    top: 50px;
+    left: 80.5%;
+    top: 150px;
     background-color: #00CCBF;
     font-family: 'Arimo', sans-serif;;
 }

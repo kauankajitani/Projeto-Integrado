@@ -52,6 +52,8 @@ body{
 }
 
 .group {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 15px;
     position: relative;
     left: 3%;
     width: 30%;
@@ -83,12 +85,13 @@ body{
 }
 
 .inicio-sobreNos {
+    font-size: 20px;
+    font-weight: 100;
     align-items: center;
     width: 60%;
-    height: 35vh;
+    height: 27vh;
     padding: 16px;
     position: relative;
-    left: 40%;
 }
 .center-icon{
 
@@ -177,7 +180,6 @@ ion-icon{
 }
 
 .comand{
-
     font-size: 100px;
     color: #111;
 
