@@ -19,7 +19,21 @@ body {
 .navbar-nav .nav-link {
     color: black;
     position: relative;
-    left: 66rem;
+}
+
+nav .nav-item a::before {
+    content: " ";
+    width: 0%;
+    height: 4px;
+    background-color: #00665F;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: 0.5s ease-in-out;
+}
+
+nav a:hover::before {
+    width: 100%;
 }
 
 .ajuda{
